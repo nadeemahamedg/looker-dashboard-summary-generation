@@ -2,8 +2,8 @@ project_name: "summarygenerationpoc"
 
 application: dashboard-summarization {
   label: "Dashboard Summary Generation POC Powered by Vertex AI"
-  file: "dashboard_summarization.js"
-  # url: "https://localhost:3000/dashboard_summarization.js"
+  # file: "dashboard_summarization.js"
+  url: "https://localhost:3000/dashboard_summarization.js"
   mount_points: {
     dashboard_vis: no
     dashboard_tile: yes
