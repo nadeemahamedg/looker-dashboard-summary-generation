@@ -2,7 +2,8 @@ project_name: "summarygenerationpoc"
 
 application: dashboard-summarization {
   label: "Dashboard Summary Generation POC Powered by Vertex AI"
-  url: "https://localhost:3000/dashboard_summarization.js"
+  file: "dashboard_summarization.js"
+  # url: "https://localhost:3000/dashboard_summarization.js"
   mount_points: {
     dashboard_vis: no
     dashboard_tile: yes
@@ -27,7 +28,7 @@ application: dashboard-summarization {
       "https://www.googleapis.com/auth/chat.messages.create",
       "https://slack.com/oauth/v2/authorize"
     ]
-    scoped_user_attributes: ["genai_client_secret"]
+    scoped_user_attributes: ["genai_client_secret", "summarygenerationpocgenai_dashboard_summarization_client_secret"]
     global_user_attributes: []
   }
 }
