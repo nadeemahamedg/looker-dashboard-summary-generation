@@ -3,7 +3,7 @@ project_name: "summarygenerationpoc"
 application: dashboard-summarization {
   label: "Dashboard Summary Generation POC Powered by Vertex AI"
   # file: "dashboard_summarization.js"
-  url: "https://localhost:3000/dashboard_summarization.js"
+  url: "https://localhost:8080/dashboard_summarization.js"
   mount_points: {
     dashboard_vis: no
     dashboard_tile: yes
@@ -14,7 +14,7 @@ application: dashboard-summarization {
     use_form_submit: yes
     core_api_methods: ["me","run_inline_query","run_query","all_lookml_models","dashboard","dashboard_dashboard_elements"]
     external_api_urls: [
-      "http://localhost:5000","http://localhost:3000","https://*.googleapis.com","https://slack.com/api/*","https://slack.com/*"
+      "http://localhost:5000","http://localhost:3000","http://localhost:8080","https://*.googleapis.com","https://slack.com/api/*","https://slack.com/*"
     ]
     oauth2_urls: [
       "https://accounts.google.com/o/oauth2/v2/auth",
@@ -28,7 +28,7 @@ application: dashboard-summarization {
       "https://www.googleapis.com/auth/chat.messages.create",
       "https://slack.com/oauth/v2/authorize"
     ]
-    scoped_user_attributes: ["genai_client_secret", "summarygenerationpocgenai_dashboard_summarization_client_secret"]
+    scoped_user_attributes: ["genai_client_secret"]
     global_user_attributes: []
   }
 }
